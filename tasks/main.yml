@@ -1,0 +1,11 @@
+---
+# tasks file for web
+- name: "imstalling software"
+  package:
+      name: "{{ software_name }}"
+      state: present
+- name: "copy content"
+  copy:
+    src: "a.html"
+    dest: "/var/www/html"
+  notify: "restarthttpd"

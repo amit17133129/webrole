@@ -1,0 +1,6 @@
+---
+# handlers file for web
+- name: "restarthttpd"
+  service: 
+     name: "{{ software_name }}"
+     state: "restarted"
